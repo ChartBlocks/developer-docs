@@ -1,0 +1,13 @@
+# Site settings
+title: ChartBlocks chart library documentation
+email: support@chartblocks.com
+description: > # this means to ignore newlines until "baseurl:"
+  Documentation for the implementation and use of the ChartBlocks chart library.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://chartblocks.com" # the base hostname & protocol for your site
+twitter_username: chartblocks
+github_username:  chartblocks
+
+# Build settings
+markdown: kramdown
+destination: _site
