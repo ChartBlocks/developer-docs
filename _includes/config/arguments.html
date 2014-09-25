@@ -1,0 +1,36 @@
+<table class="arguments">
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for argument in include.arguments %}
+        <tr>
+            <td class="{% if argument.required %}required{% endif %}">
+                {{ argument.parameter }}
+            </td>
+            <td>{{ argument.type }}</td>
+            <td>
+                <p class="description">{{argument.description | markdownify}}</p>
+
+                {% if argument.default %}
+                <p class="default">
+                    <strong>Default: </strong>{{ argument.default }}
+                </p>
+                {% endif %}
+
+                {% if argument.validValues %}
+                <p class="validValues">
+                    <strong>Valid values: </strong>
+                    <span class="value">{{ argument.validValues | join: '</span>, <span class="value">' }}</span>
+                </p>
+                {% endif %}
+
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
