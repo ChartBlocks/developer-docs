@@ -25,6 +25,10 @@ table{
             color:$text-color;
         }
 
+        .label.label-optional{
+            float:right;
+        }
+
         &.code{
             font-family:"Source Code Pro";
             font-style:normal;

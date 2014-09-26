@@ -1,0 +1,239 @@
+---
+layout: default
+---
+<pre><code class="lang-js">var key1 = sha1(body);
+  var key2 = key1 . SECRET_KEY;
+  var key3 = sha1(key2);
+  var signature = base64_encode(key3);
+</code></pre>
+<blockquote>
+    <p><code>https://api.chartblocks.com/v1/chart/541fdd38c9a61d68707f9d86?t=c9ea94ad</code></p>
+</blockquote>
+<pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">https://api.chartblocks.com/v1/chart</span></code></pre>
+<ul class="nav nav-tabs nav-tabs-examples">
+    <li class="active">
+        <a href="#success-examples-Chart-CreateChart-1_0_0-0">Success example:</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active" id="success-examples-Chart-CreateChart-1_0_0-0">
+        <pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+        </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">"chart"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">..</span><span class="pln"> chart object </span><span class="pun">..</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+    </div>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th style="width: 30%">Field</th>
+            <th style="width: 10%">Type</th>
+            <th style="width: 70%">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="code">chart</td>
+            <td>Object</td>
+            <td>
+                <p>The chart object.</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;id</td>
+            <td>String</td>
+            <td>
+                <p>Unique ID</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;name</td>
+            <td>String</td>
+            <td>
+                <p>The chart reference</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;tags</td>
+            <td>Array</td>
+            <td>
+                <p>Tags</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;config</td>
+            <td>Object</td>
+            <td>
+                <p>Config (see Chart Config docs)</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;isPublic</td>
+            <td>Boolean</td>
+            <td>
+                <p>Is chart in public gallery</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;totalViews</td>
+            <td>Number</td>
+            <td>
+                <p>Running total number of views</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;createdAt</td>
+            <td>Date</td>
+            <td>
+                <p>Created date</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;updatedAt</td>
+            <td>Date</td>
+            <td>
+                <p>Updated date</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;publicUrl</td>
+            <td>String</td>
+            <td>
+                <p>URL to a publicly visible version of the chart</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;versionHash</td>
+            <td>String</td>
+            <td>
+                <p>A hash to check for changes, compares updated data of related sets</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;images</td>
+            <td>Object</td>
+            <td>
+                <p>A list of URLs to the chart in various image formats</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;creator</td>
+            <td>Object</td>
+            <td>
+                <p>The User object that created the chart</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="code">&nbsp;&nbsp;editable</td>
+            <td>Boolean</td>
+            <td>
+                <p>Whether the chart is editable by the requestor</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pre class="prettyprint language-json prettyprinted" data-type="json"><code><span class="pln">HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span class="pln"> </span><span class="lit">200</span><span class="pln"> OK
+</span><span class="pun">{</span><span class="pln">
+</span><span class="str">"chart"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="str">"id"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"541fdd38c9a61d68707f9d86"</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"My chart"</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"tags: [ "</span><span class="pln">example</span><span class="str">", "</span><span class="pln">bar</span><span class="str">"</span><span class="pln"> </span><span class="pun">],</span><span class="pln">
+</span><span class="str">"config"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">..</span><span class="pln"> config object </span><span class="pun">..</span><span class="pln">
+</span><span class="pun">},</span><span class="pln">
+</span><span class="str">"isPublic"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"totalViews"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">153</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"createdAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2014-09-22T09:26:32+00:00"</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"updatedAt"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"2014-09-22T09:29:57+00:00"</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"publicUrl"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"http://public.chartblocks.com/c/541fdd38c9a61d68707f9d86"</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"versionHash"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"4ee3b408"</span><span class="pun">,</span><span class="pln">
+</span><span class="str">"images"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="str">"png"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"PNG"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"extension"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"png"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://img.chartblocks.com/541fdd38c9a61d68707f9d86.png"</span><span class="pun">},</span><span class="pln">
+</span><span class="str">"pdf"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">:</span><span class="str">"PDF"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"extension"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"pdf"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://img.chartblocks.com/541fdd38c9a61d68707f9d86.pdf"</span><span class="pun">},</span><span class="pln">
+</span><span class="str">"svg"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">:</span><span class="str">"SVG"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"extension"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"svg"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://img.chartblocks.com/541fdd38c9a61d68707f9d86.svg"</span><span class="pun">},</span><span class="pln">
+</span><span class="str">"eps"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">:</span><span class="str">"EPS"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"extension"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"eps"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://img.chartblocks.com/541fdd38c9a61d68707f9d86.eps"</span><span class="pun">},</span><span class="pln">
+</span><span class="str">"ps"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">"name"</span><span class="pun">:</span><span class="str">"PS"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"extension"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"ps"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"url"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"https://img.chartblocks.com/541fdd38c9a61d68707f9d86.ps"</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">},</span><span class="pln">
+</span><span class="str">"creator"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+</span><span class="pun">..</span><span class="pln"> user object </span><span class="pun">..</span><span class="pln">
+</span><span class="pun">},</span><span class="pln">
+</span><span class="str">"editable"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<table>
+    <thead>
+        <tr>
+            <th style="width: 30%">Field</th>
+            <th style="width: 10%">Type</th>
+            <th style="width: 70%">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td class="code">public <span class="label label-optional">optional</span></td>
+            <td>Boolean</td>
+            <td>
+                <p>Show all public charts (defaults to own charts).</p>
+                <p class="default-value">Default value: <code>false</code></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="code">sort_by <span class="label label-optional">optional</span></td>
+            <td>String</td>
+            <td>
+                <p>Sort results by given field. </p><p class="valid values">Valid values: <code>updatedAt</code> <code>createdAt</code> <code>name</code> <code>totalViews</code></p><p></p>
+                <p class="default-value">Default value: <code>updatedAt</code></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="code">order <span class="label label-optional">optional</span></td>
+            <td>String</td>
+            <td>
+                <p>Order of results </p><p class="valid values">Valid values: <code>asc</code> <code>desc</code></p><p></p>
+                <p class="default-value">Default value: <code>asc</code></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="code">limit <span class="label label-optional">optional</span></td>
+            <td>Number</td>
+            <td>
+                <p>Maximum number of results to return per request</p>
+                <p class="default-value">Default value: <code>50</code></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="code">page <span class="label label-optional">optional</span></td>
+            <td>Number</td>
+            <td>
+                <p>Which page of results to return (coupled with limit for pagination)</p>
+                <p class="default-value">Default value: <code>1</code></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="code">term <span class="label label-optional">optional</span></td>
+            <td>String</td>
+            <td>
+                <p>Search query</p>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td class="code">creator <span class="label label-optional">optional</span></td>
+            <td>String</td>
+            <td>
+                <p>Filter results to a particular user (used with 'public' to get a users public charts)</p>
+
+            </td>
+        </tr>
+
+    </tbody>
+</table>
