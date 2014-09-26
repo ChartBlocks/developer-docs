@@ -2,5 +2,11 @@
     <h3>{{ section.name }}</h3>
     <p class="description">{{ section.description | markdownify }}</p>
 
-    {% include config/arguments.html arguments = section.arguments %}
+    {% if section.arguments %}
+      {% include config/arguments.html arguments = section.arguments %}
+    {% endif %}
+    
+    {% if section.examples %}
+      {% include config/examples.html examples = section.examples %}
+    {% endif %}
 </div>

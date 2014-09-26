@@ -54,5 +54,13 @@
             "type": "Object",
             "description": "See [Color](#config-color)"
         }
+    ],
+    "examples": [
+        {
+            "title": "Config object base",
+            "description": "A typical chart config root would look like this",
+            "format": "json",
+            "include": "config/example/top.json"
+        }
     ]
 }

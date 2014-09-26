@@ -1,0 +1,22 @@
+<h3>Examples</h3>
+<div class="examples">
+    {% for example in include.examples %}
+    <div class="example">
+        <h4>{{ example.title }}</h4>
+        
+        {% if example.description %}
+          <p class="description">{{ example.description }}</p>
+        {% endif %}
+
+        {% highlight json %}
+        {% if example.value %}
+        {{ example.value }}
+        {% else if example.include %}
+        {% include {{ example.include }} %}
+        {% else %}
+        No `value` or `include` for example provided.
+        {% endif %}        
+        {% endhighlight %}
+    </div>    
+    {% endfor %}
+</div>
