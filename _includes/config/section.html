@@ -1,12 +1,12 @@
-<div id="config-{{ sectionKey }}" class="section">
-    <h3>{{ section.name }}</h3>
-    <p class="description">{{ section.description | markdownify }}</p>
+<div id="config-{{ include.sectionKey }}" class="section">
+    <h3>{{ include.section.name }}</h3>
+    <p class="description">{{ include.section.description | markdownify }}</p>
 
-    {% if section.arguments %}
-      {% include config/arguments.html arguments = section.arguments %}
+    {% if include.section.arguments %}
+      {% include config/arguments.html arguments = include.section.arguments %}
     {% endif %}
     
-    {% if section.examples %}
-      {% include config/examples.html examples = section.examples %}
+    {% if include.section.examples %}
+      {% include config/examples.html examples = include.section.examples %}
     {% endif %}
 </div>

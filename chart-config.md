@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Chart config
-permalink: /config/
+permalink: /chart-config/
 ---
 
 ## Table of contents
 * [Parameter types](#parameter-types)
 * [Config object](#config-object)
-{% for section_hash in site.data.config %}
+{% for section_hash in site.data['chart-config'] %}
 {% assign sectionKey = section_hash[0] %}
 {% assign section = section_hash[1] %}
     * [{{ section.name }}](#config-{{sectionKey}})
@@ -37,8 +37,8 @@ permalink: /config/
 
 ## Config object
 
-{% for section_hash in site.data.config %}
-{% assign sectionKey = section_hash[0] %}
-{% assign section = section_hash[1] %}
-  {% include config/section.html %}
+{% for section_hash in site.data['chart-config'] %}
+  {% assign sectionKey = section_hash[0] %}
+  {% assign section = section_hash[1] %}
+  {% include config/section.html sectionKey = sectionKey section = section %}
 {% endfor %}
