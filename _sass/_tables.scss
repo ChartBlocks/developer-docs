@@ -21,10 +21,14 @@ table{
         border-bottom:solid 1px $grey-color-light;
         vertical-align:top;
         text-align:left;
-        padding:8px;
+        padding:15px 8px;
 
         &.required{
             font-weight:bold;
+        }
+
+        p{
+            margin-bottom:0;
         }
 
         p.default-value{
