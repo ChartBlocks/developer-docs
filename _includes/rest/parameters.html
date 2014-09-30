@@ -1,0 +1,27 @@
+<table class="parameters">
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for parameter in include.parameters %}
+        <tr>
+            <td {% if !parameter.optional %}class="required"{% endif %}>{{ parameter.field }}</td>
+            <td>{{ parameter.type }}</td>
+            <td>
+                {{ parameter.description || markdownify }}
+
+                {% if parameter.defaultValue %}
+                <p class="info default">
+                    <strong>Default: </strong> 
+                    <span>{{ parameter.defaultValue }}</span>
+                </p>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

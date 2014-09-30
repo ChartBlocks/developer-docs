@@ -1,0 +1,18 @@
+<div id="rest-method-{{ include.method.name }}" class="methodBlock">
+    <h4>{{ include.method.title }}</h4>
+
+    <div class="meta">
+        <div class="method">{{ include.method.type | upcase }}</div>
+        <div class="url">{{ include.method.url }}</div>
+    </div>
+
+    {% if include.method.parameter %}
+    <h5>Parameters</h5>
+    {% include rest/parameters.html parameters = include.method.parameter.fields.Parameter %}
+    {% endif %}
+
+    {% if include.method.success.examples %}
+    <h5>Success example</h5>
+    {% include rest/examples.html examples = include.method.success.examples %}
+    {% endif %}
+</div>

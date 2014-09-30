@@ -4,4 +4,8 @@
     {% if include.group.description %}
     <p class="description">{{ include.group.description | markdownify }}</p>
     {% endif %}
+    
+    {% for method in include.group.methods %}
+      {% include rest/method.html method = method %}
+    {% endfor %}
 </div>

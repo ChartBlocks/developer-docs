@@ -1,0 +1,23 @@
+<ul class="nav nav-tabs nav-tabs-examples">
+    {% for example in include.examples %}
+    <li>
+        <a href="#example-{{ example.title | slugify }}">
+            {{ example.title }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<div class="tab-content">
+    {% for example in include.examples %}
+    <div id="example-{{ example.title | slugify }}">
+        {% if example.type == 'json' %}
+          {% highlight json %}
+            {{ example.content }}
+          {% endhighlight %}
+        {% else %}
+          <p>Unknown example output</p>  
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
