@@ -1,6 +1,5 @@
-<div id="rest-{{ include.group.key }}" class="section">
-    <h3>{{ include.group.title }}</h3>
-    
+<h3 id="rest-{{ include.group.key }}">{{ include.group.title }}</h3>
+<div class="section">    
     {% if include.group.description %}
     <p class="description">{{ include.group.description | markdownify }}</p>
     {% endif %}

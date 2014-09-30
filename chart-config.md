@@ -4,14 +4,7 @@ title: Chart config
 permalink: /chart-config/
 ---
 
-## Table of contents
-* [Parameter types](#parameter-types)
-* [Config object](#config-object)
-{% for section_hash in site.data['chart-config'] %}
-{% assign sectionKey = section_hash[0] %}
-{% assign section = section_hash[1] %}
-    * [{{ section.name }}](#config-{{sectionKey}})
-{% endfor %}
+<div class="toc"></div>
 
 ## Paramter types
 <table class="types">

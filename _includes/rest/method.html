@@ -1,6 +1,5 @@
-<div id="rest-method-{{ include.method.name }}" class="methodBlock">
-    <h4>{{ include.method.title }}</h4>
-
+<h4 id="rest-method-{{ include.method.name }}">{{ include.method.title }}</h4>
+<div class="methodBlock">
     <div class="meta">
         <div class="method">{{ include.method.type | upcase }}</div>
         <div class="url"><span class="prefix">{{ site.apiurl }}</span>{{ include.method.url }}</div>

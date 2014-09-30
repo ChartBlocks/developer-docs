@@ -9,7 +9,7 @@
     <tbody>
         {% for parameter in include.parameters %}
         <tr>
-            <td {% if !parameter.optional %}class="required"{% endif %}>{{ parameter.field }}</td>
+            <td {% if parameter.optional == false %}class="required"{% endif %}>{{ parameter.field }}</td>
             <td>{{ parameter.type }}</td>
             <td>
                 {{ parameter.description || markdownify }}

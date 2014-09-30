@@ -54,7 +54,7 @@
                                     "type": "Object",
                                     "field": "config",
                                     "optional": false,
-                                    "description": "<p>The chart config (see Chart Config docs)</p>"
+                                    "description": "<p>The chart config (see <a href=\"/chart-config\">Chart Config</a> docs)</p>"
                                 }
                             ]
                         }
@@ -133,7 +133,7 @@
                                     "type": "Object",
                                     "field": "chart.config",
                                     "optional": false,
-                                    "description": "<p>Config (see Chart Config docs)</p>"
+                                    "description": "<p>Config (see <a href=\"/chart-config\">Chart Config</a> docs)</p>"
                                 },
                                 {
                                     "group": "Success 200",
@@ -357,7 +357,7 @@
                                     "type": "Object",
                                     "field": "config",
                                     "optional": false,
-                                    "description": "<p>The chart config (see Chart Config docs)</p>"
+                                    "description": "<p>The chart config (see <a href=\"/chart-config\">Chart Config</a> docs)</p>"
                                 }
                             ]
                         }
@@ -414,7 +414,7 @@
                                     "type": "Object",
                                     "field": "config",
                                     "optional": false,
-                                    "description": "<p>The chart config (see Chart Config docs)</p>"
+                                    "description": "<p>The chart config (see <a href=\"/chart-config\">Chart Config</a> docs)</p>"
                                 }
                             ]
                         }
@@ -1725,11 +1725,7 @@
             ]
         }
     ]
-}             }
-            ]
-        }
-    }
-}1 200 OK\n{\n \"chartTemplates\": [\n   { .. template object .. },\n   { .. template object .. }\n ],\n \"state\": {\n   \"totalRecords\": 2\n }\n}\n",
+}. template object .. }\n ],\n \"state\": {\n   \"totalRecords\": 2\n }\n}\n",
                                 "type": "json"
                             }
                         ]
