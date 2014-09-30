@@ -5,21 +5,27 @@ table{
 
     th{
         font-size:1em;
-        color:#fff;
         padding:8px;
         vertical-align:top;
         text-align:left;
-        background-color:$grey-color;
-        border:1px solid #CCC;
+        border-bottom:solid 1px $grey-color-light;
+    }
+
+    tr:hover{
+        background-color:rgba($grey-color-light, 0.5);
     }
 
     td{
         font-size:0.9em;
         color:$grey-color-dark;
-        border:1px solid #CCC;
+        border-bottom:solid 1px $grey-color-light;
         vertical-align:top;
         text-align:left;
         padding:8px;
+
+        &.required{
+            font-weight:bold;
+        }
 
         p.default-value{
             color:$text-color;
