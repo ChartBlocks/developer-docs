@@ -16,7 +16,7 @@ table{
     }
 
     td{
-        font-size:0.9em;
+        font-size:1em;
         color:$grey-color-dark;
         border-bottom:solid 1px $grey-color-light;
         vertical-align:top;
@@ -28,7 +28,8 @@ table{
         }
 
         p{
-            margin-bottom:0;
+            margin:0;
+            font-size:1em;
         }
 
         p.default-value{

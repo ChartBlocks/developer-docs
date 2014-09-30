@@ -67,17 +67,18 @@
     }
 }
 
-.meta *{
-    float:left;
-    margin-right:5px;
-}
-
 
 /**
  * Page content
  */
-.page-content {
-    padding: $spacing-unit 0;
+.sidebar,
+.post{
+    padding:$spacing-unit 0;
+}
+
+.post{
+    float:left;
+    width:75%;
 }
 
 .page-heading {
@@ -103,6 +104,21 @@
     font-size: 24px;
 }
 
+.meta{
+
+    *{
+        float:left;
+    }
+
+    .method{
+        margin-right:10px;
+    }
+}
+
+.methodBlock{
+    padding:$spacing-unit/ 2 0 $spacing-unit 0;
+}
+
 
 
 /**
@@ -125,27 +141,31 @@
 .post-content {
     margin-bottom: $spacing-unit;
 
-    h2 {
-        font-size: 24px;
-
-        @include media-query($on-laptop) {
-            font-size: 16px;
-        }
+    h1{
+        font-size:2.2em;
+        margin:.67em 0;
     }
 
-    h3 {
-        font-size: 16px;
+    h2{
+        font-size:2.0em;
+        margin:.75em 0;
+    }
 
-        @include media-query($on-laptop) {
-            font-size: 14px;
-        }
+    h3{
+        font-size:1.8em;
+        margin:.83em 0;
     }
 
     h4 {
-        font-size: 14px;
+        font-size:1.6em;
+    }
 
-        @include media-query($on-laptop) {
-            font-size: 12px;
-        }
+    h5
+        {
+        font-size:1.4em;
+    }
+
+    p{
+        font-size:1.2em;
     }
 }

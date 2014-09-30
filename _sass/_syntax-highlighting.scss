@@ -2,15 +2,36 @@
 .highlight {
     background-color:#292b36;
     color:#ffffff;
-    padding:10px;
+    padding:20px;
     border-radius:6px;
     position:relative;
     margin:10px 0 20px 0;
     overflow:auto;
+
+    pre{
+        margin-bottom:0;
+
+        code{
+            padding:0;
+            color:inherit;
+            font-size:16px;
+            white-space:pre;
+            white-space:pre-wrap;
+            background-color:rgba(0, 0, 0, 0);
+            border:0;
+        }
+    }
 }
 
-code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+code{
+    padding:2px 4px;
+    color:#D14;
+    font-size:14px;
+    white-space:nowrap;
+    font-style:normal;
+    font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+    background-color:#f9f2f4;
+    border-radius:$base-border-radius;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
@@ -55,7 +76,7 @@ code {
 .highlight .nf { color: #268BD2 } /* Name.Function */
 .highlight .nl { color: #93A1A1 } /* Name.Label */
 .highlight .nn { color: #93A1A1 } /* Name.Namespace */
-.highlight .nx { color: #555 } /* Name.Other */
+.highlight .nx { color: #969696 } /* Name.Other */
 .highlight .py { color: #93A1A1 } /* Name.Property */
 .highlight .nt { color: #268BD2 } /* Name.Tag */
 .highlight .nv { color: #268BD2 } /* Name.Variable */

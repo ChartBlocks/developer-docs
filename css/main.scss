@@ -10,6 +10,7 @@ $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
+$base-border-radius: 4px;
 
 $spacing-unit:     30px;
 $max-width:        1180px;
@@ -33,7 +34,7 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 //** Default label background color
-$label-default-bg:            $grey-color-light !default;
+$label-default-bg:            $grey-color-dark !default;
 //** Primary label background color
 $label-primary-bg:            $brand-primary !default;
 //** Success label background color

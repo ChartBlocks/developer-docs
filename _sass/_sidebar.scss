@@ -3,20 +3,25 @@
     display:inline-block;
     float:left;
     width:22%;
-    margin-right:20px;
+    margin-right:$spacing-unit;
     border-right:2px solid $grey-color-light;
     overflow-x:hidden;
     overflow-y:auto;
 
     ul{
         list-style:none;
-        margin:10px;
+        margin:0;
+        margin-bottom:30px;
 
         li{
             > a{
                 display:block;
-                padding:2px 11px;
+                padding:5px 0;
                 color:$text-color;
+
+                &:hover{
+                    color:$grey-color-dark;
+                }
             }
         }
     }
@@ -24,9 +29,4 @@
     > ul > li > a{
         font-weight:bold;
     }
-}
-
-.post{
-    float:left;
-    width:76%;
 }
