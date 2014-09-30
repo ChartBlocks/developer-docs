@@ -3,7 +3,7 @@
 
     <div class="meta">
         <div class="method">{{ include.method.type | upcase }}</div>
-        <div class="url">{{ include.method.url }}</div>
+        <div class="url"><span class="prefix">{{ site.apiurl }}</span>{{ include.method.url }}</div>
     </div>
 
     {% if include.method.parameter %}
