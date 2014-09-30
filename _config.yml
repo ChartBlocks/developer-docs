@@ -10,5 +10,6 @@ github_username:  chartblocks
 apiurl: https://api.chartblocks.com/v1
 
 # Build settings
+highlighter: pygments
 markdown: kramdown
 destination: _site

@@ -45,7 +45,7 @@ The signature is sent in your HTTP request using the **Authorization** header in
 This snippet of psuedo code describes how to generate a signature. It should be
 possible to implement this in your language of choice.
 
-{% highlight javascript %}
+{% highlight js %}
 var key1 = sha1(body);
 var key2 = key1 . SECRET_KEY;
 var key3 = sha1(key2);
@@ -60,7 +60,12 @@ query parameters in the format:
 For POST, PUT and PATCH requests this would be your request body, normally a
 JSON document, i.e.:
 
-{% highlight json %}{ name: 'My Chart', isPublic: true }{% endhighlight %}
+{% highlight json %}
+{
+  "name": "My Chart",
+  "isPublic": true
+}
+{% endhighlight %}
 
 The SECRET_KEY is obtained along with the ACCESS_TOKEN from the profile page
 of your ChartBlocks account.
