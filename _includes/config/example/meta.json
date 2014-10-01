@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "title": {
+            "show": true,
+            "value": "My chart",
+            "font-family": "Arial",
+            "font-size": "22",
+            "color": "rgb(235, 233, 221)",
+            "rotate": 0,
+            "position": {
+                "type": "top-left"
+            }
+        },
+        "description": "This is a lovely chart example."
+    }
+}

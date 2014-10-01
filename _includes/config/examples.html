@@ -1,22 +1,33 @@
 <h3>Examples</h3>
-<div class="examples">
-    {% for example in include.examples %}
-    <div class="example">
-        <h4>{{ example.title }}</h4>
-        
-        {% if example.description %}
-          <p class="description">{{ example.description }}</p>
-        {% endif %}
 
-        {% highlight json %}
-        {% if example.value %}
-        {{ example.value }}
-        {% else if example.include %}
-        {% include {{ example.include }} %}
-        {% else %}
-        No `value` or `include` for example provided.
-        {% endif %}        
-        {% endhighlight %}
-    </div>    
-    {% endfor %}
+<div class="examples">
+    <ul class="nav nav-tabs nav-tabs-examples">
+        {% for example in include.examples %}
+        <li class="active">
+            <a href="#example-{{ example.title | slugify }}">
+                {{ example.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="tab-content">
+        {% for example in include.examples %}
+        <div id="example-{{ example.title | slugify }}">
+            {% if example.description %}
+            <p class="description">{{ example.description }}</p>
+            {% endif %}
+
+            {% highlight json %}
+            {% if example.value %}
+            {{ example.value }}
+            {% else if example.include %}
+            {% include {{ example.include }} %}
+            {% else %}
+            No `value` or `include` for example provided.
+            {% endif %}        
+            {% endhighlight %}
+        </div>
+        {% endfor %}
+    </div>
 </div>

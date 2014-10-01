@@ -185,7 +185,7 @@ ul, ol {
 li {
     > ul,
     > ol {
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -286,4 +286,18 @@ blockquote {
             fill: $grey-color;
         }
     }
+}
+
+/**
+ * Parameter definitions
+ */
+.parameter{
+    span{
+        opacity: 0.5;
+
+        &:last-child{
+            opacity: 1;
+        }
+    }
+
 }

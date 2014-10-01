@@ -4,8 +4,6 @@ title: REST API
 permalink: /rest-api/
 ---
 
-<div class="toc"></div>
-
 ## Getting started
 
 ### Making requests
@@ -79,7 +77,7 @@ ChartBlocks account to view *private* items providing they know the token.
 To request a chart or set with a token, pass the given token as a GET
 parameter of **t**, i.e.
 
-> `https://api.chartblocks.com/v1/chart/541fdd38c9a61d68707f9d86?t=c9ea94ad`
+> https://api.chartblocks.com/v1/chart/541fdd38c9a61d68707f9d86**?t=c9ea94ad**
 
 
 ## Chart config

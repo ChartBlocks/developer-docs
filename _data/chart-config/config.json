@@ -138,6 +138,11 @@
                     "default": "#000000"
                 },
                 {
+                    "parameter": "canvas.gradient",
+                    "type": "Object",
+                    "description": "Background gradient options"
+                },
+                {
                     "parameter": "canvas.gradient.colors",
                     "type": "Color[]",
                     "description": "Array of hex or rgb colors to create a gradient with"
@@ -480,6 +485,325 @@
                     "description": "An simple example of an X and Y axis",
                     "format": "json",
                     "include": "config/example/axes.json"
+                }
+            ]
+        }
+    },
+    {
+        "key": "meta",
+        "data": {
+            "name": "Meta",
+            "description": "Information about the chart",
+            "arguments": [
+                {
+                    "parameter": "meta",
+                    "type": "Object",
+                    "description": "Meta root"
+                },
+                {
+                    "parameter": "meta.title",
+                    "type": "Object",
+                    "description": "Title object"
+                },
+                {
+                    "parameter": "meta.title.show",
+                    "type": "Boolean",
+                    "description": "Show the title?",
+                    "default": true
+                },
+                {
+                    "parameter": "meta.title.value",
+                    "type": "String",
+                    "description": "The text value"
+                },
+                {
+                    "parameter": "meta.title.color",
+                    "type": "Color",
+                    "description": "Color of title text"
+                },
+                {
+                    "parameter": "meta.title.font-family",
+                    "type": "String",
+                    "description": "Font to use for text"
+                },
+                {
+                    "parameter": "meta.title.font-size",
+                    "type": "Integer",
+                    "description": "Size of title text"
+                },
+                {
+                    "parameter": "meta.title.rotate",
+                    "type": "Integer",
+                    "description": "Rotation of title text",
+                    "default": 0
+                },
+                {
+                    "parameter": "meta.title.position",
+                    "type": "Object",
+                    "description": "Position object"
+                },
+                {
+                    "parameter": "meta.title.position.type",
+                    "type": "String",
+                    "description": "Where to put the title in the canvas",
+                    "default": "top-left",
+                    "validValues": ["custom", "top-left", "top-center", "top-right", "center-left", "center-right", "bottom-left", "bottom-center", "bottom-right"]
+                },
+                {
+                    "parameter": "meta.title.position.insideMargin",
+                    "type": "Boolean",
+                    "description": "Calculation inside or outside the margin",
+                    "default": false
+                },
+                {
+                    "parameter": "meta.title.position.fitInCanvas",
+                    "type": "Boolean",
+                    "description": "Check that the title sits within the canvas",
+                    "default": true
+                },
+                {
+                    "parameter": "meta.title.position.coordinates",
+                    "type": "Object",
+                    "description": "If the position type is 'custom', set the coordinates here"
+                },
+                {
+                    "parameter": "meta.title.position.coordinates.x",
+                    "type": "Float",
+                    "description": "X coordinates from left",
+                    "default": 0
+                },
+                {
+                    "parameter": "meta.title.position.coordinates.y",
+                    "type": "Float",
+                    "description": "Y coordinates from top",
+                    "default": 0
+                },
+                {
+                    "parameter": "meta.description",
+                    "type": "Text",
+                    "description": "A description of the chart used for html meta etc"
+                }
+            ],
+            "examples": [
+                {
+                    "title": "Meta object",
+                    "description": "A title at the top left of the canvas",
+                    "format": "json",
+                    "include": "config/example/meta.json"
+                }
+            ]
+        }
+    },
+    {
+        "key": "options",
+        "data": {
+            "name": "Options",
+            "description": "Type specific options",
+            "arguments": [
+                {
+                    "parameter": "options",
+                    "type": "Object",
+                    "description": "Options root"
+                },
+                {
+                    "parameter": "options.area",
+                    "type": "Object",
+                    "description": "Area object"
+                },
+                {
+                    "parameter": "options.area.show",
+                    "type": "Boolean",
+                    "description": "Fill the area"
+                },
+                {
+                    "parameter": "options.border",
+                    "type": "Object",
+                    "description": "Border object, used for pie slices"
+                },
+                {
+                    "parameter": "options.border.color",
+                    "type": "Color",
+                    "description": "Color of the border (line)"
+                },
+                {
+                    "parameter": "options.border.thickness",
+                    "type": "Integer",
+                    "description": "Thickness of the border in pixels",
+                    "default": 0
+                },
+                {
+                    "parameter": "options.donut",
+                    "type": "Integer",
+                    "description": "Size of hole in a pie chart",
+                    "default": 0
+                },
+                {
+                    "parameter": "options.horizontal",
+                    "type": "Boolean",
+                    "description": "Makes the bars in a column chart horizontal",
+                    "default": false
+                },
+                {
+                    "parameter": "options.interpolate",
+                    "type": "String",
+                    "description": "Used to manipulate, normally smoothen, data",
+                    "default": "linear",
+                    "validValues": ["linear", "cardinal"]
+                },
+                {
+                    "parameter": "options.lines",
+                    "type": "Boolean",
+                    "description": "Whether to draw lines on line/scatter charts",
+                    "default": true
+                },
+                {
+                    "parameter": "options.offset",
+                    "type": "Integer",
+                    "description": "Where to start the first slice of a pie chart, in degrees",
+                    "default": 0
+                },
+                {
+                    "parameter": "options.points",
+                    "type": "Boolean",
+                    "description": "Whether to draw points on line/scatter charts",
+                    "default": false
+                },
+                {
+                    "parameter": "options.portion",
+                    "type": "Integer",
+                    "description": "Completeness of pie chart, in degrees. Used to make election charts",
+                    "default": 0
+                },
+                {
+                    "parameter": "options.stacked",
+                    "type": "Boolean",
+                    "description": "Whether to stack bars/areas",
+                    "default": false
+                }
+            ],
+            "examples": [
+                {
+                    "title": "Options - bar",
+                    "description": "A horizontal, stacked bar chart",
+                    "format": "json",
+                    "include": "config/example/options-bar.json"
+                },
+                {
+                    "title": "Options - election",
+                    "description": "The configuration to convert a pie chart in to an election chart",
+                    "format": "json",
+                    "include": "config/example/options-election.json"
+                }
+            ]
+        }
+    },
+    {
+        "key": "legend",
+        "data": {
+            "name": "Legend",
+            "description": "Configuring a legend for the chart",
+            "arguments": [
+                {
+                    "parameter": "legend",
+                    "type": "Object",
+                    "description": "Legend root"
+                },
+                {
+                    "parameter": "legend.show",
+                    "type": "Boolean",
+                    "description": "Whether to show the legend"
+                },
+                {
+                    "parameter": "legend.style",
+                    "type": "String",
+                    "description": "Style of the legend",
+                    "default": "vertical",
+                    "validValues": ["horizontal", "vertical"]
+                },
+                {
+                    "parameter": "legend.shape",
+                    "type": "String",
+                    "description": "Shape of each key element",
+                    "default": "circle",
+                    "validValues": ["none", "circle", "cross", "diamond", "square", "triangle-down", "triangle-up", "shape"]
+                },
+                {
+                    "parameter": "legend.font-color",
+                    "type": "Color",
+                    "description": "Color of series title text in legend"
+                },
+                {
+                    "parameter": "legend.font-family",
+                    "type": "String",
+                    "description": "Font for series title text"
+                },
+                {
+                    "parameter": "legend.font-size",
+                    "type": "Integer",
+                    "description": "Font size for series title text"
+                },
+                {
+                    "parameter": "legend.position",
+                    "type": "Object",
+                    "description": "Position object"
+                },
+                {
+                    "parameter": "legend.position.type",
+                    "type": "String",
+                    "description": "Where to put the title in the canvas",
+                    "default": "top-left",
+                    "validValues": ["custom", "top-left", "top-center", "top-right", "center-left", "center-right", "bottom-left", "bottom-center", "bottom-right"]
+                },
+                {
+                    "parameter": "legend.position.coordinates",
+                    "type": "Object",
+                    "description": "If the position type is 'custom', set the coordinates here"
+                },
+                {
+                    "parameter": "legend.position.coordinates.x",
+                    "type": "Float",
+                    "description": "X coordinates from left",
+                    "default": 0
+                },
+                {
+                    "parameter": "legend.position.coordinates.y",
+                    "type": "Float",
+                    "description": "Y coordinates from top",
+                    "default": 0
+                }
+            ]
+        }
+    },
+    {
+        "key": "tooltip",
+        "data": {
+            "name": "Tooltip",
+            "description": "Configure tooltips on hover of the chart",
+            "arguments": [
+                {
+                    "parameter": "tooltip",
+                    "type": "Object",
+                    "description": "Tooltip root"
+                },
+                {
+                    "parameter": "tooltip.show",
+                    "type": "Boolean",
+                    "description": "Enable tooltips on chart",
+                    "default": false
+                }
+            ]
+        }
+    },
+    {
+        "key": "color",
+        "data": {
+            "name": "Color",
+            "description": "A palette of colors to choose from when adding new series",
+            "arguments": [
+                {
+                    "parameter": "color",
+                    "type": "Color[]",
+                    "description": "Palette colors"
                 }
             ]
         }

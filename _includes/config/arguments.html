@@ -9,8 +9,8 @@
     <tbody>
         {% for argument in include.arguments %}
         <tr>
-            <td class="{% if argument.required %}required{% endif %}">
-                {{ argument.parameter }}
+            <td class="parameter {% if argument.required %}required{% endif %}">
+                <span>{{ argument.parameter | split:"." | join: "</span>.<span>" }}</span>
             </td>
             <td>{{ argument.type }}</td>
             <td>
