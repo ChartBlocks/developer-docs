@@ -1,7 +1,7 @@
 <h4 id="rest-method-{{ include.method.name }}">{{ include.method.title }}</h4>
 <div class="methodBlock">
     <div class="meta">
-        <div class="method label">{{ include.method.type | upcase }}</div>
+        <div class="method label" data-type="{{ include.method.type }}">{{ include.method.type | upcase }}</div>
         <div class="url"><span class="prefix">{{ site.apiurl }}</span>{{ include.method.url }}</div>
     </div>
 

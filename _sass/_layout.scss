@@ -72,11 +72,11 @@
  * Page content
  */
 .sidebar,
-.post{
+.docs{
     padding:$spacing-unit 0;
 }
 
-.post{
+.docs{
     float:left;
     width:75%;
 }
@@ -106,12 +106,19 @@
 
 .meta{
 
-    *{
+    .method{
+        display:inline-block;
+        margin:0 10px 10px 0;
+    }
+
+    .url *{
         float:left;
     }
 
-    .method{
-        margin-right:10px;
+    .url{
+        font-size:1.3em;
+        font-style:italic;
+        font-weight:bold;
     }
 }
 

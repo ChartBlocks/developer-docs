@@ -16,7 +16,6 @@
 	padding:.2em .6em .3em;
 	font-size:75%;
 	font-weight:bold;
-	line-height:1;
 	color:$label-color;
 	text-align:center;
 	white-space:nowrap;
@@ -35,6 +34,21 @@
   .btn &{
   	position:relative;
   	top:-1px;
+  }
+  &[data-type="patch"]{
+  	@include label-variant($label-info-bg);
+  }
+  &[data-type="get"]{
+  	@include label-variant($label-success-bg);
+  }
+  &[data-type="put"]{
+  	@include label-variant($label-warning-bg);
+  }
+  &[data-type="post"]{
+  	@include label-variant($label-primary-bg);
+  }
+  &[data-type="delete"]{
+  	@include label-variant($label-danger-bg);
   }
 }
 
