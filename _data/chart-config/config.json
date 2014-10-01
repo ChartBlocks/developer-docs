@@ -1,0 +1,487 @@
+[
+    {
+        "key": "top",
+        "data": {
+            "name": "Top level",
+            "description": "Config structure",
+            "arguments": [
+                {
+                    "parameter": "type",
+                    "type": "String",
+                    "description": "Width of chart canvas in pixels",
+                    "required": true,
+                    "validValues": [
+                        "bar",
+                        "line",
+                        "area",
+                        "pie"
+                    ]
+                },
+                {
+                    "parameter": "canvas",
+                    "type": "Object",
+                    "description": "See [Canvas](#config-canvas)"
+                },
+                {
+                    "parameter": "series",
+                    "type": "Object",
+                    "description": "See [Series](#config-series)"
+                },
+                {
+                    "parameter": "axes",
+                    "type": "Object",
+                    "description": "See [Axes](#config-axes)"
+                },
+                {
+                    "parameter": "meta",
+                    "type": "Object",
+                    "description": "See [Meta](#config-meta)"
+                },
+                {
+                    "parameter": "options",
+                    "type": "Object",
+                    "description": "See [Options](#config-options)"
+                },
+                {
+                    "parameter": "legend",
+                    "type": "Object",
+                    "description": "See [Legend](#config-legend)"
+                },
+                {
+                    "parameter": "tooltip",
+                    "type": "Object",
+                    "description": "See [Tooltip](#config-tooltip)"
+                },
+                {
+                    "parameter": "color",
+                    "type": "Object",
+                    "description": "See [Color](#config-color)"
+                }
+            ],
+            "examples": [
+                {
+                    "title": "Config object base",
+                    "description": "A typical chart config root would look like this",
+                    "format": "json",
+                    "include": "config/example/top.json"
+                }
+            ]
+        }
+    },
+    {
+        "key": "canvas",
+        "data": {
+            "name": "Canvas",
+            "description": "Control size and style of the chart canvas",
+            "arguments": [
+                {
+                    "parameter": "canvas",
+                    "type": "Object",
+                    "description": "Canvas root"
+                },
+                {
+                    "parameter": "canvas.width",
+                    "type": "Integer",
+                    "description": "Width of chart canvas in pixels",
+                    "default": 800
+                },
+                {
+                    "parameter": "canvas.height",
+                    "type": "Integer",
+                    "description": "Height of chart canvas in pixels",
+                    "default": 400
+                },
+                {
+                    "parameter": "canvas.margin",
+                    "type": "Object",
+                    "description": "Spacing from edge of canvas to start of chart"
+                },
+                {
+                    "parameter": "canvas.margin.top",
+                    "type": "Integer",
+                    "description": "In pixels",
+                    "default": 20
+                },
+                {
+                    "parameter": "canvas.margin.right",
+                    "type": "Integer",
+                    "description": "In pixels",
+                    "default": 20
+                },
+                {
+                    "parameter": "canvas.margin.bottom",
+                    "type": "Integer",
+                    "description": "In pixels",
+                    "default": 20
+                },
+                {
+                    "parameter": "canvas.margin.left",
+                    "type": "Integer",
+                    "description": "In pixels",
+                    "default": 20
+                },
+                {
+                    "parameter": "canvas.background-type",
+                    "type": "String",
+                    "description": "Style of background",
+                    "default": "solid",
+                    "validValues": [
+                        "solid",
+                        "gradient",
+                        "transparent"
+                    ]
+                },
+                {
+                    "parameter": "canvas.background-color",
+                    "type": "Color",
+                    "description": "Hex, rgb or rgba color",
+                    "default": "#000000"
+                },
+                {
+                    "parameter": "canvas.gradient.colors",
+                    "type": "Color[]",
+                    "description": "Array of hex or rgb colors to create a gradient with"
+                },
+                {
+                    "parameter": "canvas.gradient.direction",
+                    "type": "String",
+                    "description": "Direction of the gradient",
+                    "validValues": [
+                        "top",
+                        "bottom",
+                        "left",
+                        "right"
+                    ]
+                },
+                {
+                    "parameter": "canvas.font-family",
+                    "type": "String",
+                    "description": "Default font to use across chart",
+                    "default": "Arial"
+                },
+                {
+                    "parameter": "canvas.font-size",
+                    "type": "Integer",
+                    "description": "Default font size to use across chart",
+                    "default": "10"
+                },
+                {
+                    "parameter": "canvas.font-color",
+                    "type": "Color",
+                    "description": "Default font color to use across chart",
+                    "default": "#000000"
+                }
+            ],
+            "examples": [
+                {
+                    "title": "Canvas object",
+                    "description": "An example of a full canvas object",
+                    "format": "json",
+                    "include": "config/example/canvas.json"
+                }
+            ]
+        }
+    },
+    {
+        "key": "series",
+        "data": {
+            "name": "Series",
+            "description": "Each series represents a line/bar/area, depending on the type of chart being rendered",
+            "arguments": [
+                {
+                    "parameter": "series",
+                    "type": "Object",
+                    "description": "Series root"
+                },
+                {
+                    "parameter": "series.[id]",
+                    "type": "String",
+                    "required": true,
+                    "description": "Each series must have a unique ID assigned to it, as the object key. Valid characters are A-Z0-9_"
+                },
+                {
+                    "parameter": "series.[id].show",
+                    "type": "Boolean",
+                    "description": "Whether to draw the series on the chart",
+                    "default": true
+                },
+                {
+                    "parameter": "series.[id].title",
+                    "type": "String",
+                    "description": "The name of the series (appears in [Legend](#config-legend))"
+                },
+                {
+                    "parameter": "series.[id].color",
+                    "type": "Color[]",
+                    "description": "A single color or array of colours applied to the bar/line/area"
+                },
+                {
+                    "parameter": "series.[id].order",
+                    "type": "Integer",
+                    "description": "The order to display/render the series in"
+                },
+                {
+                    "parameter": "series.[id].source",
+                    "type": "Object",
+                    "description": "Contains information on how to obtain data for this series",
+                    "required": true
+                },
+                {
+                    "parameter": "series.[id].source.type",
+                    "type": "String",
+                    "description": "Location of the data",
+                    "default": "dataset",
+                    "validValues": ["dataset"]
+                },
+                {
+                    "parameter": "series.[id].source.setId",
+                    "type": "String",
+                    "description": "ID of the dataset to source the data from",
+                    "required": true
+                },
+                {
+                    "parameter": "series.[id].source.direction",
+                    "type": "String",
+                    "description": "Whether to iterate over the sets rows or columns",
+                    "default": "columns",
+                    "validValues": ["rows", "columns"]
+                },
+                {
+                    "parameter": "series.[id].source.headersFirst",
+                    "type": "Boolean",
+                    "description": "Whether to treat the first row as axis headings",
+                    "default": false
+                },
+                {
+                    "parameter": "series.[id].source.x",
+                    "type": "Integer[]",
+                    "description": "Column(s) that make up the x value"
+                },
+                {
+                    "parameter": "series.[id].source.y",
+                    "type": "Integer[]",
+                    "description": "Column(s) that make up the y value"
+                },
+                {
+                    "parameter": "series.[id].source.from",
+                    "type": "Integer",
+                    "description": "Which row/column to start sourcing the data from",
+                    "default": 1
+                },
+                {
+                    "parameter": "series.[id].source.to",
+                    "type": "Integer",
+                    "description": "Which row/column to source the data to",
+                    "default": null
+                },
+                {
+                    "parameter": "series.[id].source.limit",
+                    "type": "Integer",
+                    "description": "Maximum number of data points to use",
+                    "default": null
+                },
+                {
+                    "parameter": "series.[id].source.offset",
+                    "type": "Integer",
+                    "description": "Offset this many rows/columns with range of data"
+                },
+                {
+                    "parameter": "series.[id].source.sortBy",
+                    "type": "Integer[]",
+                    "description": "Row/column to sort data by"
+                },
+                {
+                    "parameter": "series.[id].source.order",
+                    "type": "Integer",
+                    "description": "Ascending (1), Descending (-1) order",
+                    "default": 1,
+                    "validValues": [1, -1]
+                }
+            ],
+            "examples": [
+                {
+                    "title": "Series object",
+                    "description": "An example of sourcing all data from column A (X) and B (Y) of a dataset",
+                    "format": "json",
+                    "include": "config/example/series.json"
+                }
+            ]
+        }
+    },
+    {
+        "key": "axes",
+        "data": {
+            "name": "Axes",
+            "description": "Configuring the chart axes (typically X, Y and Y2)",
+            "arguments": [
+                {
+                    "parameter": "axes",
+                    "type": "Object",
+                    "description": "Axes root"
+                },
+                {
+                    "parameter": "axes.[axis]",
+                    "type": "String",
+                    "description": "The axis key to configure",
+                    "validValues": ["x", "y", "y2"]
+                },
+                {
+                    "parameter": "axes.[axis].show",
+                    "type": "Boolean",
+                    "description": "Whether to draw the axis on the chart",
+                    "default": true
+                },
+                {
+                    "parameter": "axes.[axis].color",
+                    "type": "Color",
+                    "description": "The color of the axis line"
+                },
+                {
+                    "parameter": "axes.[axis].thickness",
+                    "type": "Integer",
+                    "description": "The thickness of the axis line in pixels",
+                    "default": 2
+                },
+                {
+                    "parameter": "axes.[axis].position",
+                    "type": "String",
+                    "description": "Where the axis should sit in relation to the chart",
+                    "validValues": ["left", "bottom", "top", "right"]
+                },
+                {
+                    "parameter": "axes.[axis].format",
+                    "type": "String",
+                    "description": "How to format the axis ticks",
+                    "validValues": ["auto", "text", "percent", "number-roundString", "number-round2", "date-YYYY-MM-DD", "date-YYYY-MM-DD HH:mm", "date-DD/MM/YYYY", "date-DD/MM/YYYY HH:mm"]
+                },
+                {
+                    "parameter": "axes.[axis].scale",
+                    "type": "Object",
+                    "description": "Object for controlling the scale of the axis"
+                },
+                {
+                    "parameter": "axes.[axis].scale.type",
+                    "type": "Object",
+                    "description": "Type of scale to apply",
+                    "default": "auto",
+                    "validValues": ["auto", "linear", "log", "ordinal"]
+                },
+                {
+                    "parameter": "axes.[axis].scale.forceZero",
+                    "type": "Boolean",
+                    "description": "Whether 0 should appear on the axis",
+                    "default": false
+                },
+                {
+                    "parameter": "axes.[axis].scale.niceValues",
+                    "type": "Boolean",
+                    "description": "Whether the axis should round to nice values at the start and end",
+                    "default": true
+                },
+                {
+                    "parameter": "axes.[axis].label",
+                    "type": "Object",
+                    "description": "A label object, used to set the axis label that describes the axis"
+                },
+                {
+                    "parameter": "axes.[axis].label.show",
+                    "type": "Boolean",
+                    "description": "Whether the label is visible"
+                },
+                {
+                    "parameter": "axes.[axis].label.value",
+                    "type": "String",
+                    "description": "The text to display"
+                },
+                {
+                    "parameter": "axes.[axis].label.color",
+                    "type": "Color",
+                    "description": "The text color"
+                },
+                {
+                    "parameter": "axes.[axis].label.font-family",
+                    "type": "String",
+                    "description": "Font to use"
+                },
+                {
+                    "parameter": "axes.[axis].label.font-size",
+                    "type": "Integer",
+                    "description": "Size of label"
+                },
+                {
+                    "parameter": "axes.[axis].label.rotate",
+                    "type": "Integer",
+                    "description": "Number of degrees to rotate the label. Defaults to 0, 90 or 180 depending on the axis"
+                },
+                {
+                    "parameter": "axes.[axis].ticks",
+                    "type": "Object",
+                    "description": "Tick object"
+                },
+                {
+                    "parameter": "axes.[axis].ticks.show",
+                    "type": "Boolean",
+                    "description": "Whether to display ticks on the axis",
+                    "default": true
+                },
+                {
+                    "parameter": "axes.[axis].ticks.quantity",
+                    "type": "Integer",
+                    "description": "Maximum number of ticks to display along the axis"
+                },
+                {
+                    "parameter": "axes.[axis].ticks.color",
+                    "type": "Color",
+                    "description": "Color of the tick text",
+                    "default": true
+                },
+                {
+                    "parameter": "axes.[axis].ticks.font-family",
+                    "type": "String",
+                    "description": "Font to use"
+                },
+                {
+                    "parameter": "axes.[axis].ticks.font-size",
+                    "type": "Integer",
+                    "description": "Size of ticks"
+                },
+                {
+                    "parameter": "axes.[axis].ticks.rotate",
+                    "type": "Integer",
+                    "description": "Number of degrees to rotate the ticks",
+                    "default": 0
+                },
+                {
+                    "parameter": "axes.[axis].grid",
+                    "type": "Object",
+                    "description": "Grid object"
+                },
+                {
+                    "parameter": "axes.[axis].grid.show",
+                    "type": "Boolean",
+                    "description": "Whether to draw the grid lines",
+                    "default": false
+                },
+                {
+                    "parameter": "axes.[axis].grid.color",
+                    "type": "Color",
+                    "description": "The color of the grid lines"
+                },
+                {
+                    "parameter": "axes.[axis].grid.thickness",
+                    "type": "Integer",
+                    "description": "The thickness of the grid lines in pixels",
+                    "default": 1
+                }
+            ],
+            "examples": [
+                {
+                    "title": "Axes object",
+                    "description": "An simple example of an X and Y axis",
+                    "format": "json",
+                    "include": "config/example/axes.json"
+                }
+            ]
+        }
+    }
+]

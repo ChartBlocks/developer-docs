@@ -44,8 +44,9 @@ can send an array of that parameter type (e.g. ['#000000', '#ffffff'])
 
 ## Config object
 
-{% for section_hash in site.data['chart-config'] %}
-  {% assign sectionKey = section_hash[1]['key'] %}
-  {% assign section = section_hash[1]['data'] %}
+
+{% for section_hash in site.data['chart-config'].config %}
+  {% assign sectionKey = section_hash['key'] %}
+  {% assign section = section_hash['data'] %}
   {% include config/section.html sectionKey = sectionKey section = section %}
 {% endfor %}
