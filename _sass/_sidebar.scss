@@ -18,15 +18,15 @@
                 padding:5px 0;
                 color:$text-color;
 
+                &.first{
+                    font-weight:bold;
+                    font-size:1.2em;
+                }
+
                 &:hover{
                     color:$grey-color-dark;
                 }
             }
         }
-    }
-
-    > ul > li > a{
-        font-weight:bold;
-        font-size:1.2em;
     }
 }
