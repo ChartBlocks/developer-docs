@@ -4,7 +4,7 @@
     <ul class="nav nav-tabs nav-tabs-examples">
         {% for example in include.examples %}
         <li>
-            <a href="#example-{{ example.title | slugify }}">
+            <a href="#example-{{ example.title | slugify }}" role="tab" data-toggle="tab">
                 {{ example.title }}
             </a>
         </li>
@@ -13,7 +13,7 @@
 
     <div class="tab-content">
         {% for example in include.examples %}
-        <div id="example-{{ example.title | slugify }}">
+        <div id="example-{{ example.title | slugify }}" class="tab-panle active">
             {% if example.description %}
             <p class="description">{{ example.description }}</p>
             {% endif %}
@@ -25,7 +25,7 @@
             {% include {{ example.include }} %}
             {% else %}
             No `value` or `include` for example provided.
-            {% endif %}        
+            {% endif %}
             {% endhighlight %}
         </div>
         {% endfor %}
