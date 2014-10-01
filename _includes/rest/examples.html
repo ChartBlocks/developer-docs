@@ -1,6 +1,6 @@
 <ul class="nav nav-tabs nav-tabs-examples">
     {% for example in include.examples %}
-    <li>
+    <li class="active">
         <a href="#example-{{ example.title | slugify }}">
             {{ example.title }}
         </a>
@@ -16,7 +16,7 @@
             {{ example.content }}
           {% endhighlight %}
         {% else %}
-          <p>Unknown example output</p>  
+          <p>Unknown example output</p>
         {% endif %}
     </div>
     {% endfor %}

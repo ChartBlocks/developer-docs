@@ -15,7 +15,7 @@ $base-border-radius: 4px;
 $spacing-unit:     30px;
 $max-width:        1180px;
 $text-color:       #808080;
-$background-color: #fdfdfd;
+$background-color: #fff;
 $brand-color:      #172c33;
 
 $grey-color:       #828282;
@@ -73,6 +73,7 @@ $label-link-hover-color:      #fff !default;
         "layout",
         "header",
         "sidebar",
+        "tabs",
         "tables",
         "lables",
         "syntax-highlighting"
