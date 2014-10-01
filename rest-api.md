@@ -4,8 +4,6 @@ title: REST API
 permalink: /rest-api/
 ---
 
-<div class="toc"></div>
-
 ## Getting started
 
 ### Making requests

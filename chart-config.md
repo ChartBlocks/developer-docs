@@ -4,8 +4,6 @@ title: Chart config
 permalink: /chart-config/
 ---
 
-<div class="toc"></div>
-
 ## Format
 
 Chart config is stored in a JSON object, broken down in to nested objects for 
