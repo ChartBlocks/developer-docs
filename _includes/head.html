@@ -13,12 +13,13 @@
     <script src="/js/toc.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script type="text/javascript">
-      $(function() {
-        $('.sidebar').toc({
-            listType: 'ul',
-            showEffect: 'none',
-        });
-        $( ".sidebar ul" ).prevAll().addClass('first');
-      });
+$(function() {
+    $('.sidebar').toc({
+        listType: 'ul',
+        showEffect: 'none',
+    });
+    $('.sidebar ul').prevAll().addClass('first');
+    $('a[data-toggle="tab"]:first-child').tab('show');
+});
     </script>
 </head>
