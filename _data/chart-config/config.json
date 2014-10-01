@@ -771,6 +771,14 @@
                     "description": "Y coordinates from top",
                     "default": 0
                 }
+            ],
+            "examples": [
+                {
+                    "title": "Legend on right",
+                    "description": "Displays a legend to the right of the chart",
+                    "format": "json",
+                    "include": "config/example/legend-right.json"
+                }
             ]
         }
     },
@@ -791,6 +799,14 @@
                     "description": "Enable tooltips on chart",
                     "default": false
                 }
+            ],
+            "examples": [
+                {
+                    "title": "Tooltip",
+                    "description": "Tooltips enabled",
+                    "format": "json",
+                    "include": "config/example/tooltip.json"
+                }
             ]
         }
     },
@@ -804,6 +820,14 @@
                     "parameter": "color",
                     "type": "Color[]",
                     "description": "Palette colors"
+                }
+            ],
+            "examples": [
+                {
+                    "title": "Color palette",
+                    "description": "Can use a mix of color formats",
+                    "format": "json",
+                    "include": "config/example/color.json"
                 }
             ]
         }

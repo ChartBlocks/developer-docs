@@ -1,0 +1,13 @@
+{
+    "legend": {
+        "show": true,
+        "style": "vertical",
+        "shape": "circle",
+        "font-color": "rgb(102, 102, 102)",
+        "font-family": "Arial",
+        "font-size": 14,
+        "position": {
+            "type": "top-right"
+        }
+    }
+}
