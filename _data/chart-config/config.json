@@ -138,6 +138,11 @@
                     "default": "#000000"
                 },
                 {
+                    "parameter": "canvas.gradient",
+                    "type": "Object",
+                    "description": "Background gradient options"
+                },
+                {
                     "parameter": "canvas.gradient.colors",
                     "type": "Color[]",
                     "description": "Array of hex or rgb colors to create a gradient with"
