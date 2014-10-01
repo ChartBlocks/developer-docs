@@ -13,7 +13,7 @@
 
     <div class="tab-content">
         {% for example in include.examples %}
-        <div id="example-{{ example.title | slugify }}" class="tab-panle active">
+        <div id="example-{{ example.title | slugify }}" class="tab-panle">
             {% if example.description %}
             <p class="description">{{ example.description }}</p>
             {% endif %}
