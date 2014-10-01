@@ -16,6 +16,6 @@
 
     {% if include.method.success.examples %}
     <h5>Success example</h5>
-    {% include rest/examples.html examples = include.method.success.examples %}
+    {% include rest/examples.html namespace = include.method.name examples = include.method.success.examples %}
     {% endif %}
 </div>

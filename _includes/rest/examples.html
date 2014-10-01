@@ -1,7 +1,7 @@
 <ul class="nav nav-tabs nav-tabs-examples">
     {% for example in include.examples %}
     <li>
-        <a href="#example-{{ example.title | slugify }}" role="tab" data-toggle="tab">
+        <a href="#example-{{ include.namespace }}-{{ example.title | slugify }}" role="tab" data-toggle="tab">
             {{ example.title }}
         </a>
     </li>
@@ -10,7 +10,7 @@
 
 <div class="tab-content">
     {% for example in include.examples %}
-    <div id="example-{{ example.title | slugify }}" class="tab-pane">
+    <div id="example-{{ include.namespace }}-{{ example.title | slugify }}" class="tab-pane">
         {% if example.type == 'json' %}
           {% highlight json %}
             {{ example.content }}
