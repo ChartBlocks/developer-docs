@@ -10,7 +10,7 @@
 
 <div class="tab-content">
     {% for example in include.examples %}
-    <div id="example-{{ example.title | slugify }}" class="tab-panle">
+    <div id="example-{{ example.title | slugify }}" class="tab-pane">
         {% if example.type == 'json' %}
           {% highlight json %}
             {{ example.content }}
