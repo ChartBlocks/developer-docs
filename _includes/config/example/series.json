@@ -1,0 +1,24 @@
+{
+    "series": {
+        "example-0": {
+            "show": true,
+            "title": "Example data",
+            "color": ["#F2C313"],
+            "order": 0,
+            "source": {
+                "type": "dataset",
+                "setId": "542713dcc9a61d5c0c8b4567",
+                "direction": "columns",
+                "headersFirst": true,
+                "x": [1],
+                "y": [2],
+                "from": 1,
+                "to": null,
+                "limit": null,
+                "offset": null,
+                "sortBy": [],
+                "order": 1
+            }
+        }
+    }
+}

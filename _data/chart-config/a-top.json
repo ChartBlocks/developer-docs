@@ -1,0 +1,69 @@
+{
+    "key": "top",
+    "data": {
+        "name": "Top level",
+        "description": "Config structure",
+        "arguments": [
+            {
+                "parameter": "type",
+                "type": "String",
+                "description": "Width of chart canvas in pixels",
+                "required": true,
+                "validValues": [
+                    "bar",
+                    "line",
+                    "area",
+                    "pie"
+                ]
+            },
+            {
+                "parameter": "canvas",
+                "type": "Object",
+                "description": "See [Canvas](#config-canvas)"
+            },
+            {
+                "parameter": "series",
+                "type": "Object",
+                "description": "See [Series](#config-series)"
+            },
+            {
+                "parameter": "axes",
+                "type": "Object",
+                "description": "See [Axes](#config-axes)"
+            },
+            {
+                "parameter": "meta",
+                "type": "Object",
+                "description": "See [Meta](#config-meta)"
+            },
+            {
+                "parameter": "options",
+                "type": "Object",
+                "description": "See [Options](#config-options)"
+            },
+            {
+                "parameter": "legend",
+                "type": "Object",
+                "description": "See [Legend](#config-legend)"
+            },
+            {
+                "parameter": "tooltip",
+                "type": "Object",
+                "description": "See [Tooltip](#config-tooltip)"
+            },
+            {
+                "parameter": "color",
+                "type": "Object",
+                "description": "See [Color](#config-color)"
+            }
+        ],
+        "examples": [
+            {
+                "title": "Config object base",
+                "description": "A typical chart config root would look like this",
+                "format": "json",
+                "include": "config/example/top.json"
+            }
+        ]
+    }
+}

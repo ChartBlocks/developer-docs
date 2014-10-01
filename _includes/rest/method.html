@@ -4,6 +4,10 @@
         <div class="method label" data-type="{{ include.method.type }}">{{ include.method.type | upcase }}</div>
         <div class="url"><span class="prefix">{{ site.apiurl }}</span>{{ include.method.url }}</div>
     </div>
+    
+    {% if include.method.description %}
+    {{ include.method.description }}
+    {% endif %}
 
     {% if include.method.parameter %}
     <h5>Parameters</h5>

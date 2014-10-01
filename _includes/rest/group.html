@@ -5,7 +5,6 @@
     {% endif %}
     
     {% for method in include.group.methods %}
-      method!!
       {% include rest/method.html method = method %}
     {% endfor %}
 </div>

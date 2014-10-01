@@ -210,6 +210,7 @@
                     "version": "1.0.0",
                     "name": "ListChart",
                     "group": "Chart",
+                    "groupDescription": "<p>Chart objects contain all the information required to render a chart, along with meta information on the owner.</p>",
                     "parameter": {
                         "fields": {
                             "Parameter": [
@@ -421,7 +422,8 @@
                     },
                     "filename": "vendor/chartblocks/data-server/module/DataServerModule/src/DataServerModule/Controller/ChartController.php"
                 }
-            ]
+            ],
+            "description": "<p>Chart objects contain all the information required to render a chart, along with meta information on the owner.</p>"
         },
         {
             "key": "data",
@@ -1725,13 +1727,7 @@
             ]
         }
     ]
-}otalRecords\": 2\n }\n}\n",
-                                "type": "json"
-                            }
-                        ]
-                    },
-                    "filename": "vendor/chartblocks/data-server/module/DataServerModule/src/DataServerModule/Controller/ChartTemplateController.php"
-                }
+}        }
             }
         }
     ]

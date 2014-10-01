@@ -1,0 +1,62 @@
+{
+    "axes": {
+        "x": {
+            "show": true,
+            "position": "bottom",
+            "thickness": 2,
+            "color": "rgba(235, 233, 221, 0.3)",
+            "label": {
+                "show": true,
+                "value": "X axis",
+                "color": "rgb(235, 233, 221)",
+                "font-size": 16,
+                "font-family": "Arial",
+                "rotate": 0
+            },
+            "ticks": {
+                "show": true,
+                "quantity": 5,
+                "color": "rgb(235, 233, 221)",
+                "font-family": "Arial",
+                "font-size": 14,
+                "rotate": 0
+            },
+            "grid": {
+                "show": false,
+                "thickness": 1,
+                "color": "rgb(235, 233, 221)"
+            }
+        },
+        "y": {
+            "show": true,
+            "position": "left",
+            "thickness": 2,
+            "color": "rgba(235, 233, 221, 0.3)",
+            "format": "number-roundString",
+            "scale": {
+                "type": "log"
+            },
+            "label": {
+                "show": true,
+                "value": "Y axis",
+                "color": "rgb(235, 233, 221)",
+                "font-size": 16,
+                "font-family": "Arial",
+                "rotate": 270
+            },
+            "ticks": {
+                "quantity": 6,
+                "show": true,
+                "rotate": 0,
+                "font-family": "Arial",
+                "font-size": 14,
+                "color": "rgb(235, 233, 221)"
+            },
+            "grid": {
+                "show": true,
+                "thickness": 1,
+                "color": "rgba(235, 233, 221, 0.3)"
+            }
+        }
+    }
+}
