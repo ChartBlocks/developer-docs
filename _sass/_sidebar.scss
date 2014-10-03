@@ -1,5 +1,8 @@
 .sidebar{
-    position:relative;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
     display:inline-block;
     margin-right:$spacing-unit;
     border-right:2px solid $grey-color-light;

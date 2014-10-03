@@ -3,7 +3,7 @@
 
 // Give the tabs something to sit on
 .nav{
-	margin-bottom: 0;
+	margin-bottom: 15px;
   	margin-left: 0; // Override default ul/ol
   	list-style: none;
   	@extend .clearfix;
