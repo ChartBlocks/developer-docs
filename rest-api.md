@@ -11,7 +11,7 @@ permalink: /rest-api/
 The ChartBlocks API is hosted at [https://api.chartblocks.com/v1/](https://api.chartblocks.com/v1/). The API is 
 REST based, providing access to chart, set, data and user information.
 
-To generate charts dynamically, please see the Image API.
+To generate charts on-the-fly, please see the Image API.
 
 ### SDK's
 
