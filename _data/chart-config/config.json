@@ -263,6 +263,17 @@
                     "description": "Column(s) that make up the x value"
                 },
                 {
+                    "parameter": "series.[id].source.groupBy",
+                    "type": "Integer[]",
+                    "description": "Column(s) that should be grouped by matching values"
+                },
+                {
+                    "parameter": "series.[id].source.groupAccumulator",
+                    "type": "String",
+                    "description": "How to manipulate grouped values",
+                    "validValues": ["avg", "sum", "count", "max", "min", "first", "last"]
+                },
+                {
                     "parameter": "series.[id].source.y",
                     "type": "Integer[]",
                     "description": "Column(s) that make up the y value"

@@ -12,6 +12,8 @@
                 "headersFirst": true,
                 "x": [1],
                 "y": [2],
+                "groupBy": [1],
+                "groupAccumulator": "sum",
                 "from": 1,
                 "to": null,
                 "limit": null,
