@@ -675,9 +675,20 @@
                 },
                 {
                     "parameter": "options.points",
+                    "type": "Object"
+                },
+                {
+                    "parameter": "options.points.show",
                     "type": "Boolean",
                     "description": "Whether to draw points on line/scatter charts",
                     "default": false
+                },
+                {
+                    "parameter": "options.points.shape",
+                    "type": "String",
+                    "description": "Shape of the point",
+                    "default": "circle",
+                    "validValues": ["circle", "square", "cross", "diamond", "triangle-down", "triangle-up"]
                 },
                 {
                     "parameter": "options.portion",
