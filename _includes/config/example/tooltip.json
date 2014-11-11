@@ -1,5 +1,23 @@
 {
     "tooltip": {
-        "show": true
+        "show": true,
+        "content": "######**{% raw  %}{{ title }}{% endraw %}**\n**{% raw  %}{{ x }}{% endraw %}:** {% raw  %}{{ y }}{% endraw %}",
+        "shape": "dialog",
+        "padding": 10,
+        "background": {
+            "color": "rgba(255, 255, 255, 1)"
+        },
+        "font": {
+            "family": "Arial",
+            "size": 12,
+            "color": "rgb(0, 0, 0)"
+        },
+        "series": {
+            "strict": true
+        },
+        "border": {
+            "thickness": 1,
+            "color": "rgba(0, 0, 0, 1)"
+        }
     }
 }

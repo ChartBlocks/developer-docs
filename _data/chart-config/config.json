@@ -826,7 +826,88 @@
                     "parameter": "tooltip.show",
                     "type": "Boolean",
                     "description": "Enable tooltips on chart",
-                    "default": false
+                    "default": true
+                },
+                {
+                    "parameter": "tooltip.shape",
+                    "type": "String",
+                    "description": "The tooltip shape",
+                    "default": "dialog",
+                    "validValues": ["dialog", "oval", "rectangle"]
+                },
+                {
+                    "parameter": "tooltip.content",
+                    "type": "String",
+                    "description": "Tooltip content using GitHub markup. (Bold, Italic and Headers only)",
+                    "default": "######**{{ title }}**\\n**{{ x }}:** {{ y }}"
+                },
+                {
+                    "parameter": "tooltip.padding",
+                    "type": "Int",
+                    "description": "Padding of the tooltip",
+                    "default": 10
+                },
+                {
+                    "parameter": "tooltip.background",
+                    "type": "Object",
+                    "description": "Tooltip backgrounds object"
+                },
+                {
+                    "parameter": "tooltip.background.color",
+                    "type": "Color",
+                    "description": "Hex, rgb or rgba color",
+                    "default": "rgba(255, 255, 255, 1)"
+                },
+                {
+                    "parameter": "tooltip.font",
+                    "type": "Object",
+                    "description": "Tooltip font object"
+                },
+                {
+                    "parameter": "tooltip.font.family",
+                    "type": "String",
+                    "description": "Tooltip font",
+                    "default": "Arial"
+                },
+                {
+                    "parameter": "tooltip.font.size",
+                    "type": "Integer",
+                    "description": "Tooltip font size",
+                    "default": "12"
+                },
+                {
+                    "parameter": "tooltip.font.color",
+                    "type": "Color",
+                    "description": "Hex, rgb or rgba color",
+                    "default": "rgb(0, 0, 0)"
+                },
+                {
+                    "parameter": "tooltip.series",
+                    "type": "Object",
+                    "description": "Tooltip series object"
+                },
+                {
+                    "parameter": "tooltip.series.strict",
+                    "type": "Boolean",
+                    "description": "If set to true, the tooltip for each series will only show if its X value matches the closest X value from any series. If set to false it will show the nearest matching tooltip for every series (Relivent for chart types where tooltips don't follow the cursor)",
+                    "default": true
+                },
+                {
+                    "parameter": "tooltip.border",
+                    "type": "Object",
+                    "description": "Tooltip border object"
+                },
+                {
+                    "parameter": "tooltip.border.color",
+                    "type": "Color",
+                    "description": "Color of the tooltip border",
+                    "default": "rgba(0, 0, 0, 1)"
+                },
+                {
+                    "parameter": "tooltip.border.thickness",
+                    "type": "Integer",
+                    "description": "Thickness of the tooltip border",
+                    "default": 0
                 }
             ],
             "examples": [
