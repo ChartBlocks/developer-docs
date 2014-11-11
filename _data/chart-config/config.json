@@ -675,9 +675,21 @@
                 },
                 {
                     "parameter": "options.points",
+                    "type": "Object",
+                    "description": "Points object"
+                },
+                {
+                    "parameter": "options.points.show",
                     "type": "Boolean",
                     "description": "Whether to draw points on line/scatter charts",
                     "default": false
+                },
+                {
+                    "parameter": "options.points.shape",
+                    "type": "String",
+                    "description": "Shape of the point",
+                    "default": "circle",
+                    "validValues": ["circle", "square", "cross", "diamond", "triangle-down", "triangle-up"]
                 },
                 {
                     "parameter": "options.portion",
@@ -704,6 +716,12 @@
                     "description": "The configuration to convert a pie chart in to an election chart",
                     "format": "json",
                     "include": "config/example/options-election.json"
+                },
+                {
+                    "title": "Options - points",
+                    "description": "The configuration to display points on a line chart",
+                    "format": "json",
+                    "include": "config/example/options-points.json"
                 }
             ]
         }
