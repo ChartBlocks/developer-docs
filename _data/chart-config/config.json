@@ -675,7 +675,8 @@
                 },
                 {
                     "parameter": "options.points",
-                    "type": "Object"
+                    "type": "Object",
+                    "description": "Points object"
                 },
                 {
                     "parameter": "options.points.show",
@@ -715,6 +716,12 @@
                     "description": "The configuration to convert a pie chart in to an election chart",
                     "format": "json",
                     "include": "config/example/options-election.json"
+                },
+                {
+                    "title": "Options - points",
+                    "description": "The configuration to display points on a line chart",
+                    "format": "json",
+                    "include": "config/example/options-points.json"
                 }
             ]
         }
