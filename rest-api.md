@@ -36,7 +36,7 @@ as coming from you, and mitigates man in the middle attacks.
 
 The signature is sent in your HTTP request using the **Authorization** header in the format:
 
-{% highlight php %}
+{% highlight js %}
 'Authorization: BASIC ' . base64_encode($ACCESS_TOKEN . ':' . $SIGNATURE);
 {% endhighlight %}
 
