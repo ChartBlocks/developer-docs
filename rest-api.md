@@ -36,7 +36,7 @@ as coming from you, and mitigates man in the middle attacks.
 
 The signature is sent in your HTTP request using the **Authorization** header in the format:
 
-> "**Authorization**: BASIC `SIGNATURE`"
+> "**Authorization**: BASIC " . base64_encode(`ACCESS_TOKEN` . ":" . `SIGNATURE`)
 
 ### Generating a signature
 
@@ -47,9 +47,7 @@ possible to implement this in your language of choice.
 var key1 = sha1(body);
 var key2 = key1 . SECRET_KEY;
 var key3 = sha1(key2);
-var key4 = base64_encode(key3);
-var key5 = ACCESS_TOKEN . ':' . key4;
-var signature = base64_encode(key5);
+var signature = base64_encode(key3);
 {% endhighlight %}
 
 The **body** variable is your request body. For a GET request this would be your 
